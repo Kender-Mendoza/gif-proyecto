@@ -1,7 +1,17 @@
 
 import { useEffect, useState } from "react";
 
-export const useFetchGifs = (category) => {
+type GifData = {
+  id: string,
+  title: string,
+  images: {
+    fixed_height: {
+      url: string
+    }
+  }
+}
+
+export const useFetchGifs = (category: string) => {
   const [gifs, setGifs] = useState([]);
 
   const getGifts = async () => {
@@ -9,7 +19,7 @@ export const useFetchGifs = (category) => {
     const response = await fetch(url);
     const { data } = await response.json();
 
-    return data.map((element) => {
+    return data.map((element: GifData) => {
       return {
         id: element.id,
         title: element.title,

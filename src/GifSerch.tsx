@@ -10,7 +10,6 @@ export const GifSerch = () => {
     if (categories.includes(categoryFormated)) return;
 
     setCategories([categoryFormated, ...categories]);
-    console.log(category)
   }
 
   return (

@@ -5,7 +5,7 @@ export const useFetchGifs = (category: string) => {
   const [gifs, setGifs] = useState([]);
 
   const getGifts = async () => {
-    const url = `https://api.giphy.com/v1/gifs/search?api_key=w4B74Ot0KSvUcT0TJWLz4jVl7Ml04NiY&q=${category}&limit=5`;
+    const url = `https://api.giphy.com/v1/gifs/search?api_key=${import.meta.env.VITE_GIPHY_API_KEY}&q=${category}&limit=5`;
     const response = await fetch(url);
     const { data } = await response.json();
 

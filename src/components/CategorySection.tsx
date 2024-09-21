@@ -1,5 +1,5 @@
-import { CategoryData, Category } from "../types/types"
-import { useFetchGifs } from "../hooks/useFetchGifs"
+import { CategoryData, Category } from "../types/types";
+import { useFetchGifs } from "../hooks/useFetchGifs";
 
 export const CategorySection: React.FC<Category> = ({ category }) => {
 
@@ -25,4 +25,4 @@ export const CategorySection: React.FC<Category> = ({ category }) => {
       </div>
     </div>
   )
-}
+};

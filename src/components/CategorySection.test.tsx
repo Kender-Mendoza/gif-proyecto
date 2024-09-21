@@ -23,7 +23,7 @@ describe('CategorySection', () => {
   });
 
   it('renders content', () => {
-    const component = render(<CategorySection category={category} key={category} />)
+    const component = render(<CategorySection category={category} key={category} />);
 
     expect(component.container.querySelector('h3')).toBeDefined();
     expect(component.container.querySelector('img')).toBeDefined();
@@ -31,10 +31,11 @@ describe('CategorySection', () => {
   });
 
   it('render the correct content', () => {
-    const component = render(<CategorySection category={category} key={category} />)
+    const component = render(<CategorySection category={category} key={category} />);
+    const imgHtml = component.getByAltText('category image') as HTMLImageElement;
 
     expect(component.getByText('gift test title')).toBeDefined();
-    expect(component.getByAltText('category image')).toBeDefined();
+    expect(imgHtml.src).toEqual('https://www.example_url.com/');
     expect(component.getByText('gift test title')).toBeDefined();
   });
 });

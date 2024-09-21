@@ -1,15 +1,6 @@
 
 import { useEffect, useState } from "react";
-
-type GifData = {
-  id: string,
-  title: string,
-  images: {
-    fixed_height: {
-      url: string
-    }
-  }
-}
+import { GifData } from "../types/types";
 
 export const useFetchGifs = (category: string) => {
   const [gifs, setGifs] = useState([]);

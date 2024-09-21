@@ -1,12 +1,5 @@
 import { useFetchGifs } from "../hooks/useFetchGifs"
-
-type Category = { category: string }
-
-type CategoryData = {
-  id: string,
-  title: string,
-  url: string
-}
+import { CategoryData, Category } from "../types/types"
 
 export const CategorySection: React.FC<Category> = ({ category }) => {
 

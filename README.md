@@ -13,7 +13,7 @@ Install dependencies:
 ```bash
 npm install
 ```
-To Run the testcases use:
+To run the testcases use:
 ```bash
 npx jest
 ```

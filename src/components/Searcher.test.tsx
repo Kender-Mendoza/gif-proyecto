@@ -1,9 +1,8 @@
-import React from 'react';
 import { render } from '@testing-library/react';
 import { Searcher } from './Searcher';
 import { fireEvent } from '@testing-library/dom';
 
-describe('Searcher Component', () => {
+describe('Searcher', () => {
   const mockOnAddCategory = jest.fn();
 
   afterEach(() => {

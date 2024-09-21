@@ -1,11 +1,5 @@
-import { useFetchGifs } from "../hooks/useFetchGifs"
-
-type Category = { category: string }
-type CategoryData = {
-  id: string,
-  title: string,
-  url: string
-}
+import { CategoryData, Category } from "../types/types";
+import { useFetchGifs } from "../hooks/useFetchGifs";
 
 export const CategorySection: React.FC<Category> = ({ category }) => {
 
@@ -19,7 +13,7 @@ export const CategorySection: React.FC<Category> = ({ category }) => {
         {
           gifs.map((gif: CategoryData) => (
             <div className="card w-25 h-100" key={gif.id}>
-              <img className="card-img-top" src={gif.url} />
+              <img className="card-img-top" alt='category image' src={gif.url} />
               <div className="card-body">
                 <p className="card-text text-center">
                   {gif.title}
@@ -31,4 +25,4 @@ export const CategorySection: React.FC<Category> = ({ category }) => {
       </div>
     </div>
   )
-}
+};
